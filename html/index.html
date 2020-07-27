@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IndiAssignment | Home</title>
+
+    <link rel="stylesheet" href="/css/styles-merged.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/edd.css">
+    <link rel="stylesheet" href="/css/style.css">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-default probootstrap-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Enlight</a>
+      </div>
+
+      <div id="navbar-collapse" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="/html/index.html">Home</a></li>
+          <li><a href="/html/corona.html">About</a></li>
+    <li><a href="/html/cases.html">Cases</a></li>
+    <li><a href="/html/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <img src="/IMAGES/ban1.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="/images/ban2.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="/images/ban3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/images/ban4.jpg" style="width:100%">
+      </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+   
+    <section class="probootstrap-section">
+      <div class="container">
+        <div class="">
+          </div>
+
+          <div class="col-md-20 col-sm-20 probootstrap-animate">
+            <h2 style="align-content: center;">PROTECT YOURSELF ALL YOU CAN!</h2>
+            <p style="text-align: justify;">Coronaviruses are a large family of zoonotic viruses that cause illness 
+              ranging from the common cold to severe respiratory diseases. Zoonotic means these viruses are able to be 
+              transmitted from animals to humans. There are several coronaviruses known to be circulating in different 
+              animal populations that have not yet infected humans. COVID-19 is the most recent to make the jump to human infection.
+
+              common cold to severe respiratory diseases. Zoonotic means these viruses are able to be transmitted from animals to 
+              humans. There are several coronaviruses known to be circulating in different animal populations that have not yet 
+              infected humans. COVID-19 is the most recent to make the jump to human infection.
+             </p>
+            <p style="text-align: justify;">Common signs of COVID-19 infection are similar to the common cold and include respiratory 
+              symptoms such as dry cough, fever, shortness of breath, and breathing difficulties. In more severe cases, infection can 
+              cause pneumonia, severe acute respiratory syndrome, kidney failure, and death.
+
+              The COVID-19 infection is spread from one person to others via droplets produced from the respiratory system of infected 
+              people, often during coughing or sneezing. According to current data, time from exposure to onset of symptoms is usually 
+              between two and 14days, with an average of five days.
+              </p>
+            
+            <p style="text-align: justify;">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+              Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring 
+              special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory 
+              disease, and cancer are more likely to develop serious illness.
+              The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. 
+              Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. 
+              The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, 
+              so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).                
+              At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating 
+              potential treatments. WHO will continue to provide updated information as soon as clinical findings become available so stay informed
+             </p>
+            
+              
+            <p style="text-align: justify;">WHO is bringing the world’s scientists and global health professionals 
+              together to accelerate the research and development process, and develop new norms and standards to 
+              contain the spread of the coronavirus pandemic and help care for those affected.
+              The R&D Blueprint has been activated to accelerate diagnostics, vaccines and therapeutics for 
+              this novel coronavirus.                 
+              The solidarity of all countries will be essential to ensure equitable access to COVID-19 health products.
+             </p>
+            <p style="text-align: justify;">WHO is gathering the latest international multilingual scientific findings and 
+              knowledge on COVID-19. The global literature cited in the WHO COVID-19 database is updated daily (Monday through Friday) 
+              from searches of bibliographic databases, hand searching, and the addition of other expert-referred scientific articles. 
+              This database represents a comprehensive multilingual source of current literature on the topic. While it may not be 
+              exhaustive, new research is added regularly
+              </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+      
+
+
+
+
+
+
+
+
+    <footer class="probootstrap-footer probootstrap-bg">
+        
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <p>&copy; 26 <sup>th</sup> July, 2020 IndiAssignment | TechMakers 
+                  &copy; 26 <sup>th</sup> July, 2020 IndiAssignment | TechMakers | 
+                 <a href="https://web.facebook.com/odesheba" class="fa fa-facebook"> fb </a> | 
+                 <a href="https://twitter.com/home" class="fa fa-twitter"> Tw </a> |
+                 <a href="https://www.instagram.com/eddahwireng/" class="fa fa-instagram"> Ig </a> |
+                 <a href="https://www.linkedin.com/in/edwin-ahwireng-156908156/" class="fa fa-linkedin"> Li </a> |
+                 <a href="https://www.pinterest.com/eddahwireng/" class="fa fa-pinterest"> P </a>
+
+                 
+                </p>
+              </div>
+              <div class="col-md-4 probootstrap-back-to-top">
+                <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+    <script src="/js/scripts.min.js"></script>
+    <script src="/js/main.min.js"></script>
+    
+    </body>
+    </html>
